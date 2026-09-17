@@ -1,4 +1,4 @@
-# Unstructured Data Analysis (2026-2) — Programming Materials
+# Unstructured Data Analysis (2026-2) - Programming Materials
 
 **Institution:** Hanyang University, Department of Data Science
 **Professor:** Misuk Kim
@@ -24,7 +24,7 @@ Midterm exam: **Oct 26** · Final exam: **Dec 14**
 
 ---
 
-## 📂 Week 3 — Text Preprocessing (Sep 21)
+## 📂 Week 3 - Text Preprocessing (Sep 21)
 
 | Notebook | Open |
 |---|---|
@@ -34,18 +34,23 @@ Midterm exam: **Oct 26** · Final exam: **Dec 14**
 
 **Contents**
 
-- `01_text_preprocessing.ipynb` — sentence splitting, tokenization (`word_tokenize`, `WordPunctTokenizer`, `RegexpTokenizer`), stop-word removal, stemming vs. lemmatization, POS tagging, NER
-- `02_visualization.ipynb` — word-frequency graphs and word clouds on the *Moby Dick* corpus
-- `03_assignment1_text_preprocessing.ipynb` — fill-in-the-blank assignment on the Twitter Entity Sentiment dataset (100 points)
-- `data/` — `twcs.csv` (Twitter entity sentiment), `whale_mask.png` (word-cloud mask)
+- `01_text_preprocessing.ipynb` : sentence splitting, tokenization (`word_tokenize`, `WordPunctTokenizer`, `RegexpTokenizer`), stop-word removal, stemming vs lemmatization, POS tagging, NER
+- `02_visualization.ipynb` : word-frequency graphs and word clouds on the *Moby Dick* corpus
+- `03_assignment1_text_preprocessing.ipynb` : fill-in-the-blank assignment on the Twitter Entity Sentiment dataset (100 points)
+- `data/` : `twcs.csv` (Twitter entity sentiment), `whale_mask.png` (word-cloud mask)
+
+**Data sources**
+
+- Twitter Entity Sentiment Analysis : https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
+- Moby Dick : Project Gutenberg sample bundled with NLTK (`nltk.corpus.gutenberg`)
 
 ---
 
 ## 💻 How to use the notebooks
 
-1. Click the **Open In Colab** badge above. You do **not** need a GitHub account — a Google account is enough.
+1. Click the **Open In Colab** link above. You do **not** need a GitHub account; a Google account is enough.
 2. In Colab, choose **File ▸ Save a copy in Drive**. Edits made without saving a copy are lost.
-3. Run the cells from top to bottom with **Shift + Enter**. Always run the **Setup** cell first — it downloads the NLTK resources.
+3. Run the cells from top to bottom with **Shift + Enter**. Always run the **Setup** cell first. It downloads the NLTK resources.
 4. If a cell hangs, use **Runtime ▸ Restart session** and run the Setup cell again.
 
 Requirements are handled inside the notebooks (`nltk`, `wordcloud`, `pandas`, `matplotlib`).
@@ -55,18 +60,25 @@ The datasets are downloaded automatically from this repository, so **Google Driv
 
 ## 📝 Assignment submission
 
-Rename your notebook to `Assignment_N_YourName_StudentID.ipynb` (e.g. `Assignment_1_HongGilDong_2026123456.ipynb`),
-run it once from top to bottom so that all outputs are visible, and submit the `.ipynb` file through the LMS.
+Rename your notebook to `Assignment_N_YourName_StudentID.ipynb` (e.g. `Assignment_1_HongGilDong_2026123456.ipynb`).
+**Run it once** from top to bottom so that all outputs are visible, and submit the `.ipynb` file through the LMS.
 
 ---
 
-## 📊 Data sources
+## 📄 Usage
 
-- Twitter Entity Sentiment Analysis — https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
-- Moby Dick — Project Gutenberg sample bundled with NLTK (`nltk.corpus.gutenberg`)
+These materials are prepared for students of *Unstructured Data Analysis* (2026-2) at
+Hanyang University. They may be used freely for study within the course.
+Redistribution or use outside the course requires permission from the instructor.
+The datasets belong to their original sources listed in each week's section.
+
+© 2026 Industrial Data Science Lab (IDSL), Hanyang University
 
 ---
 
 ## 🙏 Acknowledgement
 
-The programming materials are based on those prepared by the previous teaching assistant, Minjoo Son, updated for the current NLTK and Colab environment.
+Special thanks to **Minjoo Son**, a Ph.D. student in our lab (IDSL) and a former teaching
+assistant for this course. The structure of these programming sessions, the choice of
+examples, and much of the code are hers, updated here for the current NLTK and Colab
+environment. Her careful preparation made this year's materials possible.
