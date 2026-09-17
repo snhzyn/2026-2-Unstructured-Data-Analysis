@@ -69,5 +69,4 @@ run it once from top to bottom so that all outputs are visible, and submit the `
 
 ## 🙏 Acknowledgement
 
-The programming materials are based on those prepared by the previous teaching assistant,
-[Min Joo Son](https://github.com/ming9oori/2025-2-Unstructured-Data-Analysis) (2025-2), updated for the current NLTK and Colab environment.
+The programming materials are based on those prepared by the previous teaching assistant, Minjoo Son, updated for the current NLTK and Colab environment.
