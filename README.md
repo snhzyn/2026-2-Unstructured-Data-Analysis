@@ -14,8 +14,8 @@ Lecture videos and slides are distributed through the LMS; this repository only 
 | # | Date | Topic | Assignment |
 |---|---|---|---|
 | 1 | Sep 21 | Text Preprocessing | Programming Assignment 1 |
-| 2 | Sep 28 | Text Representation 1 | Programming Assignment 2 |
-| 3 | Oct 12 | Text Representation 2 | Programming Assignment 3 |
+| 2 | Sep 28 | Text Representation I - Classic Method | Programming Assignment 2 |
+| 3 | Oct 12 | Text Representation II - Distributed Method | Programming Assignment 3 |
 | 4 | Oct 19 | Dimensionality Reduction | Programming Assignment 4 |
 | 5 | Nov 9 | Document Classification | Programming Assignment 5 |
 | 6 | Nov 23 | Sentiment Analysis | Programming Assignment 6 |
@@ -43,6 +43,38 @@ Midterm exam: **Oct 26** · Final exam: **Dec 14**
 
 - Twitter Entity Sentiment Analysis : https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
 - Moby Dick : Project Gutenberg sample bundled with NLTK (`nltk.corpus.gutenberg`)
+
+---
+
+## 📂 Week 4 - Text Representation I : Classic Method (Sep 28)
+
+Covers lecture **4-1 Text Representation I - Classic Method** (Bag of Words · Word Weighting · N-Grams).
+
+| Notebook | Open |
+|---|---|
+| 1. Bag of Words | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/01_bag_of_words.ipynb) |
+| 2. Word Weighting & N-Grams | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/02_word_weighting_and_ngrams.ipynb) |
+| **Assignment 2** (due Oct 5, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/03_assignment2_text_representation.ipynb) |
+
+**Contents**
+
+- `01_bag_of_words.ipynb` : term-document matrix by hand (binary vs frequency), word order is lost,
+  preprocessing and stop words, the matrix on 2,000 reviews, `CountVectorizer`, sparsity,
+  Korean text with KoNLPy (`Okt`)
+- `02_word_weighting_and_ngrams.ipynb` : term frequency (the Shakespeare table rebuilt from NLTK),
+  document frequency and IDF, TF-IDF with the lecture's worked example, SMART variants
+  (`sublinear_tf` / `use_idf` / `norm`), n-grams, cosine similarity
+- `03_assignment2_text_representation.ipynb` : fill-in-the-blank assignment on the Twitter Entity
+  Sentiment dataset from Assignment 1 - term-document matrix, df/idf, TF-IDF, n-grams,
+  cosine similarity (100 points)
+- `data/` : `daum_movie_review.csv` (Korean movie reviews). The assignment reuses
+  `week03-text-preprocessing/data/twcs.csv`.
+
+**Data sources**
+
+- Movie Reviews (English) : `nltk.corpus.movie_reviews` (Pang & Lee)
+- Shakespeare plays : `nltk.corpus.gutenberg`
+- Daum movie reviews (Korean) : collected for this course
 
 ---
 
