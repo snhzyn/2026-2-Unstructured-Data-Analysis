@@ -54,7 +54,7 @@ Covers lecture **4-1 Text Representation I - Classic Method** (Bag of Words · W
 |---|---|
 | 1. Bag of Words | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/01_bag_of_words.ipynb) |
 | 2. Word Weighting & N-Grams | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/02_word_weighting_and_ngrams.ipynb) |
-| **Assignment 2** (due Oct 5, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/03_assignment2_text_representation.ipynb) |
+| **Assignment 2** (due Oct 6, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/03_assignment2_text_representation.ipynb) |
 
 **Contents**
 
