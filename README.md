@@ -54,7 +54,7 @@ Covers lecture **4-1 Text Representation I - Classic Method** (Bag of Words · W
 |---|---|
 | 1. Bag of Words | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/01_bag_of_words.ipynb) |
 | 2. Word Weighting & N-Grams | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/02_word_weighting_and_ngrams.ipynb) |
-| **Assignment 2** (due Oct 6, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/03_assignment2_text_representation.ipynb) |
+| **Assignment 2** (due Oct 5, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week04-text-representation-1/03_assignment2_text_representation.ipynb) |
 
 **Contents**
 
@@ -78,6 +78,39 @@ Covers lecture **4-1 Text Representation I - Classic Method** (Bag of Words · W
 
 ---
 
+## 📂 Week 6 - Text Representation II : Distributed Method (Oct 12)
+
+Covers lecture **5-1 / 5-2 Text Representation II - Distributed Representation** (Word2Vec · GloVe · FastText · Sentence/Paragraph/Document-level).
+
+| Notebook | Open |
+|---|---|
+| 1. Word-level Embeddings | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week06-text-representation-2/01_word_embeddings.ipynb) |
+| 2. Document Embeddings | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week06-text-representation-2/02_document_embeddings.ipynb) |
+| **Assignment 3** (due Oct 19, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week06-text-representation-2/03_assignment3_distributed_representation.ipynb) |
+
+**Contents**
+
+- `01_word_embeddings.ipynb` : one-hot vs distributed representation, Word2Vec (skip-gram training pairs,
+  subsampling, the two vectors of a word, CBOW vs Skip-gram), GloVe (co-occurrence matrix, probability ratios,
+  weighting function, pre-trained vectors), FastText (character n-grams, out-of-vocabulary words),
+  word similarity and word analogy tests
+- `02_document_embeddings.ipynb` : TF-IDF and averaged word vectors as baselines, Doc2Vec (PV-DM, PV-DBOW,
+  `infer_vector`), a comparison of document representations
+- `03_assignment3_distributed_representation.ipynb` : fill-in-the-blank assignment on the Twitter Entity
+  Sentiment dataset from Assignment 1, personalized by student ID, with five short questions on your own
+  results (100 points)
+- `data/` : `wordsim_similarity_goldstandard.csv` (word similarity test set),
+  `word_analogy_goldstandard.txt` (word analogy test set). The assignment reuses
+  `week03-text-preprocessing/data/twcs.csv`.
+
+**Data sources**
+
+- Movie Reviews (English) : `nltk.corpus.movie_reviews` (Pang & Lee)
+- Pre-trained GloVe vectors : `glove-wiki-gigaword-50` / `-100` via `gensim.downloader` (Pennington et al., Stanford NLP)
+- WordSim-353 similarity set and the Google word analogy set, as bundled with last year's course materials
+
+---
+
 ## 💻 How to use the notebooks
 
 1. Click the **Open In Colab** link above. You do **not** need a GitHub account; a Google account is enough.
@@ -85,7 +118,7 @@ Covers lecture **4-1 Text Representation I - Classic Method** (Bag of Words · W
 3. Run the cells from top to bottom with **Shift + Enter**. Always run the **Setup** cell first. It downloads the NLTK resources.
 4. If a cell hangs, use **Runtime ▸ Restart session** and run the Setup cell again.
 
-Requirements are handled inside the notebooks (`nltk`, `wordcloud`, `pandas`, `matplotlib`).
+Requirements are handled inside the notebooks (`nltk`, `wordcloud`, `pandas`, `matplotlib`, `gensim`).
 The datasets are downloaded automatically from this repository, so **Google Drive mounting is not required**.
 
 ---
