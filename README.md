@@ -111,6 +111,36 @@ Covers lecture **5-1 / 5-2 Text Representation II - Distributed Representation**
 
 ---
 
+## 📂 Week 7 - Dimensionality Reduction (Oct 19)
+
+Covers lecture **6-2 / 7-1 Dimensionality Reduction** (Dimensionality Reduction · Feature Selection · Latent Semantic Analysis · Stochastic Neighbor Embedding).
+
+| Notebook | Open |
+|---|---|
+| 1. Feature Selection | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week07-dimensionality-reduction/01_feature_selection.ipynb) |
+| 2. LSA and t-SNE | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week07-dimensionality-reduction/02_lsa_and_tsne.ipynb) |
+| **Assignment 4** (due Oct 25, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week07-dimensionality-reduction/03_assignment4_dimensionality_reduction.ipynb) |
+
+**Contents**
+
+- `01_feature_selection.ipynb` : how high-dimensional and sparse a term-document matrix is, the lecture's ten
+  feature selection metrics (DF, Acc, AccR, PR, OddR, OddN, F1, IG, chi-squared, BNS) reproduced on its 10 x 10 data
+  set and applied to 2,000 reviews, filter (top-k) vs wrapper (forward selection)
+- `02_lsa_and_tsne.ipynb` : SVD by hand (properties, rank, reduced and truncated SVD), latent semantic analysis with
+  `TruncatedSVD` (what a dimension means, similar documents, similar words), SNE neighbor probabilities and perplexity,
+  the crowding problem, t-SNE maps of documents and words
+- `03_assignment4_dimensionality_reduction.ipynb` : fill-in-the-blank assignment on the Positive / Negative tweets of
+  the Twitter Entity Sentiment dataset from Assignment 1, personalized by student ID (five short TODO items, 100 points)
+- No `data/` folder this week: the notebooks use `nltk.corpus.movie_reviews`, and the assignment reuses
+  `week03-text-preprocessing/data/twcs.csv`.
+
+**Data sources**
+
+- Movie Reviews (English) : `nltk.corpus.movie_reviews` (Pang & Lee)
+- Twitter Entity Sentiment Analysis : https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
+
+---
+
 ## 💻 How to use the notebooks
 
 1. Click the **Open In Colab** link above. You do **not** need a GitHub account; a Google account is enough.
@@ -118,7 +148,7 @@ Covers lecture **5-1 / 5-2 Text Representation II - Distributed Representation**
 3. Run the cells from top to bottom with **Shift + Enter**. Always run the **Setup** cell first. It downloads the NLTK resources.
 4. If a cell hangs, use **Runtime ▸ Restart session** and run the Setup cell again.
 
-Requirements are handled inside the notebooks (`nltk`, `wordcloud`, `pandas`, `matplotlib`, `gensim`).
+Requirements are handled inside the notebooks (`nltk`, `wordcloud`, `pandas`, `matplotlib`, `gensim`, `scikit-learn`).
 The datasets are downloaded automatically from this repository, so **Google Drive mounting is not required**.
 
 ---
