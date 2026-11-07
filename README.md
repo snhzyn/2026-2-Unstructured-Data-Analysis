@@ -126,7 +126,7 @@ Covers lecture **6-2 / 7-1 Dimensionality Reduction** (Dimensionality Reduction 
 - `01_feature_selection.ipynb` : how high-dimensional and sparse a term-document matrix is, the lecture's ten
   feature selection metrics (DF, Acc, AccR, PR, OddR, OddN, F1, IG, chi-squared, BNS) reproduced on its 10 x 10 data
   set and applied to 2,000 reviews, filter (top-k) vs wrapper (forward selection)
-- `02_lsa_and_tsne.ipynb` : SVD by hand (properties, rank, reduced and truncated SVD), latent semantic analysis with
+- `02_lsa_and_tsne.ipynb` : SVD with NumPy (properties, rank, reduced and truncated SVD), latent semantic analysis with
   `TruncatedSVD` (what a dimension means, similar documents, similar words), SNE neighbor probabilities and perplexity,
   the crowding problem, t-SNE maps of documents and words
 - `03_assignment4_dimensionality_reduction.ipynb` : fill-in-the-blank assignment on the Positive / Negative tweets of
@@ -141,6 +141,38 @@ Covers lecture **6-2 / 7-1 Dimensionality Reduction** (Dimensionality Reduction 
 
 ---
 
+## 📂 Week 10 - Document Classification (Nov 9)
+
+Covers lecture **9-2 Document Classification** (Overview · Naïve Bayesian Classifier · k-Nearest Neighbor).
+
+| Notebook | Open |
+|---|---|
+| 1. Naïve Bayes and k-NN | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/01_naive_bayes_and_knn.ipynb) |
+| 2. Comparing Classifiers | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/02_comparing_classifiers.ipynb) |
+| **Assignment 5** (due Nov 15, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/03_assignment5_document_classification.ipynb) |
+
+**Contents**
+
+- `01_naive_bayes_and_knn.ipynb` : document classification as supervised learning, the lecture's Naïve Bayes example
+  by hand, maximum likelihood estimates and the zero-probability problem, Laplace smoothing checked against
+  `MultinomialNB`, the five k-NN steps (Minkowski distance, majority vs weighted voting, the decision boundary for
+  k = 1 / 15 / 151, the best k on validation data), normalization and cut-off, Naïve Bayes vs k-NN, and classifying
+  a headline of your own
+- `02_comparing_classifiers.ipynb` : decision boundaries of six classifiers on a 2-D toy set, seven classifiers on the
+  same news articles and with less training data, a document as one TF-IDF vector vs as a 512 x 128 matrix from BERT-Tiny
+- `03_assignment5_document_classification.ipynb` : fill-in-the-blank assignment on another AG News sample
+  (ten short TODO items, 100 points)
+- `data/` : `ag_news_sample.csv` (1,000 training + 250 test articles per category, used in class),
+  `ag_news_assignment.csv` (500 + 150 per category, used in the assignment)
+
+**Data sources**
+
+- AG News (Zhang, Zhao & LeCun, 2015), four categories: World, Sports, Business, Sci/Tech.
+  Balanced samples of the original train / test splits; HTML entities cleaned, headline and description joined.
+- BERT-Tiny : `prajjwal1/bert-tiny` on Hugging Face (Turc et al., 2019; Bhargava et al., 2021)
+
+---
+
 ## 💻 How to use the notebooks
 
 1. Click the **Open In Colab** link above. You do **not** need a GitHub account; a Google account is enough.
@@ -148,7 +180,7 @@ Covers lecture **6-2 / 7-1 Dimensionality Reduction** (Dimensionality Reduction 
 3. Run the cells from top to bottom with **Shift + Enter**. Always run the **Setup** cell first. It downloads the NLTK resources.
 4. If a cell hangs, use **Runtime ▸ Restart session** and run the Setup cell again.
 
-Requirements are handled inside the notebooks (`nltk`, `wordcloud`, `pandas`, `matplotlib`, `gensim`, `scikit-learn`).
+Requirements are handled inside the notebooks (`nltk`, `wordcloud`, `pandas`, `matplotlib`, `gensim`, `scikit-learn`; Week 10 also uses `torch` and `transformers`, both pre-installed in Colab).
 The datasets are downloaded automatically from this repository, so **Google Drive mounting is not required**.
 
 ---
