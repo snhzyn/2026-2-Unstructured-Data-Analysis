@@ -143,20 +143,20 @@ Covers lecture **6-2 / 7-1 Dimensionality Reduction** (Dimensionality Reduction 
 
 ## 📂 Week 10 - Document Classification (Nov 9)
 
-Covers lecture **9-2 Document Classification** (Overview · Naïve Bayesian Classifier · k-Nearest Neighbor).
+Covers lecture **9-2 Document Classification** (Overview · Naive Bayesian Classifier · k-Nearest Neighbor).
 
 | Notebook | Open |
 |---|---|
-| 1. Naïve Bayes and k-NN | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/01_naive_bayes_and_knn.ipynb) |
+| 1. Naive Bayes and k-NN | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/01_naive_bayes_and_knn.ipynb) |
 | 2. Comparing Classifiers | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/02_comparing_classifiers.ipynb) |
 | **Assignment 5** (due Nov 15, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/03_assignment5_document_classification.ipynb) |
 
 **Contents**
 
-- `01_naive_bayes_and_knn.ipynb` : document classification as supervised learning, the lecture's Naïve Bayes example
+- `01_naive_bayes_and_knn.ipynb` : document classification as supervised learning, the lecture's Naive Bayes example
   by hand, maximum likelihood estimates and the zero-probability problem, Laplace smoothing checked against
   `MultinomialNB`, the five k-NN steps (Minkowski distance, majority vs weighted voting, the decision boundary for
-  k = 1 / 15 / 151, the best k on validation data), normalization and cut-off, Naïve Bayes vs k-NN, and classifying
+  k = 1 / 15 / 151, the best k on validation data), normalization and cut-off, Naive Bayes vs k-NN, and classifying
   a headline of your own
 - `02_comparing_classifiers.ipynb` : decision boundaries of six classifiers on a 2-D toy set, seven classifiers on the
   same news articles and with less training data, a document as one TF-IDF vector vs as a 512 x 128 matrix from BERT-Tiny
