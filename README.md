@@ -143,20 +143,20 @@ Covers lecture **6-2 / 7-1 Dimensionality Reduction** (Dimensionality Reduction 
 
 ## 📂 Week 10 - Document Classification (Nov 9)
 
-Covers lecture **9-2 Document Classification** (Overview · Naive Bayesian Classifier · k-Nearest Neighbor).
+Covers lecture **9-2 Document Classification** (Overview · Naïve Bayesian Classifier · k-Nearest Neighbor).
 
 | Notebook | Open |
 |---|---|
-| 1. Naive Bayes and k-NN | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/01_naive_bayes_and_knn.ipynb) |
+| 1. Naïve Bayes and k-NN | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/01_naive_bayes_and_knn.ipynb) |
 | 2. Comparing Classifiers | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/02_comparing_classifiers.ipynb) |
 | **Assignment 5** (due Nov 15, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week10-document-classification/03_assignment5_document_classification.ipynb) |
 
 **Contents**
 
-- `01_naive_bayes_and_knn.ipynb` : document classification as supervised learning, the lecture's Naive Bayes example
+- `01_naive_bayes_and_knn.ipynb` : document classification as supervised learning, the lecture's Naïve Bayes example
   by hand, maximum likelihood estimates and the zero-probability problem, Laplace smoothing checked against
   `MultinomialNB`, the five k-NN steps (Minkowski distance, majority vs weighted voting, the decision boundary for
-  k = 1 / 15 / 151, the best k on validation data), normalization and cut-off, Naive Bayes vs k-NN, and classifying
+  k = 1 / 15 / 151, the best k on validation data), normalization and cut-off, Naïve Bayes vs k-NN, and classifying
   a headline of your own
 - `02_comparing_classifiers.ipynb` : decision boundaries of six classifiers on a 2-D toy set, seven classifiers on the
   same news articles and with less training data, a document as one TF-IDF vector vs as a 512 x 128 matrix from BERT-Tiny
@@ -170,6 +170,38 @@ Covers lecture **9-2 Document Classification** (Overview · Naive Bayesian Class
 - AG News (Zhang, Zhao & LeCun, 2015), four categories: World, Sports, Business, Sci/Tech.
   Balanced samples of the original train / test splits; HTML entities cleaned, headline and description joined.
 - BERT-Tiny : `prajjwal1/bert-tiny` on Hugging Face (Turc et al., 2019; Bhargava et al., 2021)
+
+---
+
+## 📂 Week 12 - Sentiment Analysis (Nov 23)
+
+Covers lecture **10-2 Sentiment Analysis Overview** and lecture **11-1 / 11-2 Sentiment Analysis** (Lexicon-based Approach · Machine Learning-based Approach).
+
+| Notebook | Open |
+|---|---|
+| 1. Lexicon-based Sentiment Analysis | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week12-sentiment-analysis/01_lexicon_based_sentiment.ipynb) |
+| 2. ML-based Sentiment Analysis | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week12-sentiment-analysis/02_ml_based_sentiment.ipynb) |
+| **Assignment 6** (due Nov 29, 23:59) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/snhzyn/2026-2-Unstructured-Data-Analysis/blob/main/week12-sentiment-analysis/03_assignment6_sentiment_analysis.ipynb) |
+
+**Contents**
+
+- `01_lexicon_based_sentiment.ipynb` : an opinion as a quintuple, document-level labels from star ratings, counting
+  opinion words with the Hu and Liu opinion lexicon and its mistakes, growing a lexicon from WordNet, SentiWordNet,
+  and a corpus-based sentiment dictionary built with a t-test per word (domain-dependent orientations)
+- `02_ml_based_sentiment.ipynb` : Naive Bayes and logistic regression on word counts (unigrams vs bigrams),
+  an Elastic Net sentiment lexicon learned from the ratings, label spreading on the lecture's word graph and on a
+  Word2Vec graph from 30 seed words, and every method on the same test reviews
+- `03_assignment6_sentiment_analysis.ipynb` : assignment on another sample of the hotel reviews
+  (ten short fill-in-the-blank TODO items and five short-answer questions, 100 points)
+- `data/` : `tripadvisor_sample.csv` (6,000 training + 1,500 test reviews, used in class),
+  `tripadvisor_assignment.csv` (3,000 + 1,000 reviews, used in the assignment)
+
+**Data sources**
+
+- Trip Advisor Hotel Reviews (Alam, Ryu & Lee, 2016, *Information Sciences* 339), Kaggle, CC BY-NC 4.0.
+  20,491 reviews with a 1-5 rating; the text was lowercased and most stop words removed by the authors.
+  We sampled reviews of 20-200 words and wrote the split contraction *n't* back as *not*.
+- Opinion Lexicon (Hu & Liu, 2004), WordNet and SentiWordNet through NLTK
 
 ---
 
